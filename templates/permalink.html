@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="permalink chat-wrapper">
+
+        <div class="chat">
+
+        <div class="chat-list">
+            <ul id="chat-ul">
+                 {% for chat in chatting_list %}
+                    <li><span class="comment" >{{chat.comment}}</span><span class="span-date">{{chat.created_at}}</span></li>
+
+                  {% endfor %}
+
+            </ul>
+        </div>
+
+        </div>
+    </div>
+{% endblock %}

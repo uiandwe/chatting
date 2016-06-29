@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/response.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/ionicons.min.css">
+
+    <title>spoqa 채팅</title>
+</head>
+<body>
+    <header>
+        {% if permalink != 1 %}
+        <span><i class="ion-navicon-round menu"></i></span>
+        {% endif %}
+        <h2>spoqa chat</h2>
+    </header>
+    <div class="continer">
+        {% block body %}{% endblock %}
+    </div>
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+    <script type="text/javascript" src="/static/js/chat.js"></script>
+    <script type="text/javascript" src="/static/js/index.js"></script>
+    <script src="/static/js/jquery.form.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    </script>
+</body>
+</html>

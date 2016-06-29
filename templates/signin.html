@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="signin_wrapper">
+            <div class="signin">
+                <form method="POST" action='/signin'  class="signin_form">
+                    <div class="input_wrapper">
+                        <label class="input_desc" for="email"> e-mail </label>
+                        <input type="email" name="email" id="email" placeholder="email">
+                    </div>
+
+                    <div class="input_wrapper">
+                        <label class="input_desc" for="password"> 비밀번호 </label>
+                        <input type="password" name="password" id="password" placeholder="password">
+                    </div>
+                    <button class="btn submit" type="submit" value="가입하기">로그인</button>
+
+                </form>
+            </div>
+    </div>
+{% endblock %}

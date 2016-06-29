@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="signup_wrapper">
+        <div class="signup">
+            <form method="POST" action='/signup' class="sign_form">
+                <div class="input_wrapper">
+                    <label class="input_desc" for="username"> 유저 이름 </label>
+                    <input type="text" name="username" id="username" placeholder="username">
+                </div>
+                <div class="input_wrapper">
+                    <label class="input_desc" for="email"> E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="spoqa@test.com">
+                </div>
+                <div class="input_wrapper">
+                    <label class="input_desc" for="password"> 비밀번호 </label>
+                    <input type="password" name="password" id="password" placeholder="password">
+                </div>
+                <button class="btn submit" id="btn_signup" type="submit" value="가입하기">가입하기</button>
+
+            </form>
+        </div>
+    </div>
+{% endblock %}

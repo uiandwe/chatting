@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="chat-wrapper">
+        <input id="user_id" value="{{ user_id }}" type="hidden">
+        <input id="room" value="" type="hidden">
+        <div class="background"></div>
+        <div class="channel-wrapper">
+            <span class="close-icon"><i class="ion-close"></i></span>
+            <ul id="channel-list">
+                {% for channel in channel_list %}
+                    <li class=channel data-channel="{{channel}}">{{ channel }} <i class="ion-checkmark-circled"></i> </li>
+                  {% endfor %}
+
+            </ul>
+            <div class="join-wrapper">
+                <form id="join" method="POST" action='#'>
+
+                    <div class="input-wrapper">
+                        <input type="text" name="join_room" id="join_room" placeholder="Room Name">
+                    </div>
+                    <div class="btn-wrapper">
+                        <button type="submit"  class="btn btn_join_room">Join</button>
+                    </div>
+
+                </form>
+            </div>
+
+            <!--<form id="leave" method="POST" action='#'>-->
+                <!--<input type="text" name="leave_room" id="leave_room" placeholder="Room Name">-->
+                <!--<input type="submit" value="Leave Room">-->
+            <!--</form>-->
+
+        </div>
+        <div class="chat">
+
+        <div class="chat-list">
+            <ul id="chat-ul">
+
+            </ul>
+        </div>
+
+
+
+        <div class="send-form-wrapper">
+            <form id="send_room" method="POST" action='#'>
+                <div class="textarea-wrapper">
+                    <textarea rows="4" name="room_data" id="room_data" placeholder="Message"></textarea>
+                </div>
+                <div class="btn-wrapper">
+                    <button type="submit" value="Send to Room" class="btn btn_send_room">Send</button>
+                </div>
+            </form>
+        </div>
+        <div class="update-form-wrapper">
+            <form id="update" method="POST" action="#">
+                <div class="textarea-wrapper">
+                    <textarea rows="4" type="text" name="update_message" id="update_message" ></textarea>
+                </div>
+                <input type="hidden" name="chat_id" id="update_id" placeholder="Room Name">
+
+                <div class="btn-wrapper">
+                    <button type="submit" value="Send to Room" class="btn btn_send_room">Send</button>
+                </div>
+
+            </form>
+        </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="delete-form-wrapper">
+        <form id="delete" method="POST" action="#">
+            <input type="hidden" name="chat_id" id="delete_id" placeholder="Room Name">
+            <button type="button" class="btn close">취소</button>
+            <button type="submit" value="Send to Room" class="btn btn_send_room">삭제</button>
+        </form>
+    </div>
+{% endblock %}
